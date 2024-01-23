@@ -1,0 +1,263 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-primary: #fff;
+        --bg-secondary: #E9E9E9;
+        --bg-hover:#dcdcdc;
+    
+        --text-primary: #212121;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #000000;
+        --bg-secondary: #131313;
+        --bg-hover:#1a1a1a;
+    
+        --text-primary: #DEDEDE;
+
+        --icon-themed: invert();
+    }
+}
+
+:root {
+    --ui-color: #1f79ee;
+
+    --quality-poor: #d04b4b;
+    --quality-weak: #ce773d;
+    --quality-good: #9dbf4f;
+    --quality-excellent: #6cb840;
+}
+
+.page {
+    box-sizing: border-box;
+    font-size: 16px;
+    user-select: none;
+}
+
+.page__body {
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: var(--bg-secondary);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: var(--bg-hover);
+}
+
+.disabled {
+    cursor: not-allowed;
+}
+
+.disabled:hover {
+    background-color: var(--bg-secondary);
+}
+
+.disabled img {
+    opacity: 0.2;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+img {
+    filter: var(--icon-themed);
+}
+
+
+.app__title {
+    margin-bottom: 80px;
+}
+
+.app__password {
+    display: flex;
+    column-gap: 10px;
+}
+
+.app__password-quality {
+    width: 100%;
+    background-color: var(--bg-secondary);
+    max-width: 100%;
+    border: none;
+    border-radius: 3px;
+    height: 6px;
+    margin: 10px 0;
+}
+
+.app__password-quality--bar {
+    width: 0%;
+    background-color: var(--quality-excellent);
+    max-width: 100%;
+    border: none;
+    border-radius: 3px;
+    height: 6px;
+    transition: background-color 0.2s ease, width 0.2s ease;
+}
+
+
+.app__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.app__range {
+    display: flex;
+    column-gap: 10px;
+}
+
+.app__range--slider {
+    width: 580px;
+    max-width: 100%;
+    margin: 0;
+}
+.app__range--set {
+    color: var(--text-primary);
+    width: 58px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--bg-secondary);
+    padding-left: 14px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.password {
+    position: relative;
+    width: 100%;
+}
+
+.password__field {
+    color: var(--text-primary);
+    border: none;
+    background-color: var(--bg-secondary);
+    height: 40px;
+    width: 100%;
+    border-radius: 15px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: inherit;
+    font-variant-ligatures: none;
+    line-height: 20px;
+    padding: 10px 54px 10px 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.password__toggle {
+    position: absolute;
+    border: none;
+    background: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.app__character-title {
+    font-size: inherit;
+    font-weight: inherit;
+    margin-bottom: 10px;
+}
+
+.characters {
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.characters__item {
+    position: relative;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    border-radius: 15px;
+    transition: background-color 0.2s;
+}
+
+.characters__item:hover {
+    background-color: var(--bg-hover);
+}
+
+.characters__item input[type=checkbox]:checked + .characters__item--toggle + .characters__item--title {
+    background-color: var(--ui-color);
+    color: #fff;
+}
+
+.characters__item--check {
+    display: none;
+}
+
+.characters__item--toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.characters__item--title {
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color ease 0.2s,color ease 0.2s;
+}
+
+
+.github {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 30px;
+}
+
+footer p {
+    color: #9d9d9d;
+}
+
+footer p a {
+    color: #9d9d9d;
+}
